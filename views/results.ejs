@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+
+    <div class="eventsTop-container">
+        <p> The weather in <%= weather.city[0].toUpperCase() + weather.city.slice(1).toLowerCase() %> is currently <%= weather.des %> <p>
+        <p> The temperature is <%= weather.temp %> ℃</p>
+        <img src= <%= weather.imgURL %> >
+    </div>
+
+    <div class="resultsMid-container">
+
+    <!-- display all the events in the city searched by users -->
+      <% if(weather.events.length > 0){ %>
+        <h3>All events in <%= weather.city[0].toUpperCase() + weather.city.slice(1).toLowerCase() %>:</h3>
+        <br />
+        <div class="row">
+        <% weather.events.forEach(function(eachEvent){ %>
+            <div class="card mx-auto mb-4" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title"><%= eachEvent.event.toLowerCase()%></h5>
+                <p class="card-text"><%= eachEvent.event_info.toLowerCase() %></p>
+              </div>
+              <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><%= eachEvent.event_time.replace('T', ' ') %></li>
+                <li class="list-group-item"><%= eachEvent.event_place.toLowerCase() %></li>
+              </ul>
+              </div>
+            </div>
+        <% }) %>
+        </div>
+
+      <!-- display when users search for a city that doesnt have events -->
+      <% } else { %>
+      <h3>There are no available events in <%= weather.city[0].toUpperCase() + weather.city.slice(1).toLowerCase() %>.</h3>
+      <% } %>
+
+
+    <br />
+    <a class="login-btn btn btn-light btn-lg" href="/events" role="button">Back</a>
+    <a class="login-btn btn btn-light btn-lg" href="/" role="button">Log Out</a>
+    <a class="btn btn-dark btn-lg" href="/submit" role="button">Submit a event</a>
+
+<%- include('partials/footer') %>

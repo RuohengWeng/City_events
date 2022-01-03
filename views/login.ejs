@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+
+<div class="login-container">
+  <img class="home-img" src="imgs/c.png" alt="logo" width="120"/>
+  <h1>Welcome to City Events</h1>
+
+      <div class="card login-card">
+        <div class="card-body">
+
+          <!-- Makes POST request to /login route -->
+          <form action="/login" method="POST">
+            <div class="form-group mb-3">
+              <label class="form-label" for="email">Email</label>
+              <input type="email" class="form-control" name="email" required>
+            </div>
+            <div class="form-group mb-3">
+              <label class="form-label" for="password">Password</label>
+              <input type="password" class="form-control" name="password" required>
+            </div>
+
+            <button type="submit" class="btn btn-warning btn-lg">Login</button>
+          </form>
+        </div>
+
+        <br />
+        <!-- only display when users input incorrect email or password -->
+        <% if (!loginStatus){ %>
+          <div class="alert alert-danger" role="alert">
+           Incorret email or password!
+          </div>
+        <% } %>
+
+      </div>
+
+</div>
+
+<%- include('partials/footer') %>

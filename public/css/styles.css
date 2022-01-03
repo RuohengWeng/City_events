@@ -1,0 +1,68 @@
+/* define the background */
+body {
+  background-color: #FFF9B6;
+  text-align: center;
+}
+
+/* define the style of homepage */
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.home-container{
+  margin: 10% 0;
+}
+
+.home-img{
+  margin-bottom: 20px;
+}
+
+/* define style of signup and login page */
+.form-group{
+  text-align: left;
+}
+
+.login-btn{
+  margin-right: 50px;
+}
+
+.signup-card{
+  margin: 40px auto;
+  width: 350px;
+  height: 350px;
+}
+
+.login-card{
+  margin: 40px auto;
+  width: 350px;
+  height: 260px;
+}
+
+.login-container{
+  margin: 2.5rem auto;
+}
+
+.alert-danger{
+  margin-top: 20px;
+}
+
+
+/* define the styles of events page */
+.eventsTop-container{
+  margin: 5% auto 0;
+}
+
+.eventsMid-container{
+  width: 350px;
+  margin: 0 auto;
+}
+
+.resultsMid-container{
+  padding: 40px;
+  margin: 0 auto;
+}
+
+.search-text{
+  margin-right: 20px;
+}

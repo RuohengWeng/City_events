@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+<div class="eventsTop-container">
+  <img class="home-img" src="imgs/home.png" alt="guitar and flowers" width="200" />
+  <p class="lead">Create a new event, publish it!</p>
+</div>
+
+<div class="eventsMid-container">
+
+  <!-- This form is for users to submit events -->
+  <form action="/submit" method="POST">
+    <div class="input-group mb-3">
+      <input class="form-control" type="text" name="eventName" placeholder="Event title" required />
+    </div>
+    <div class="input-group mb-3">
+      <input class="form-control" type="datetime-local" name="eventTime" placeholder="Open time" required />
+    </div>
+    <div class="input-group mb-3">
+      <input class="form-control" type="text" name="eventPlace" placeholder="Address" required />
+    </div>
+    <div class="input-group mb-3">
+      <input class="form-control" type="text" name="cityName" placeholder="City" required />
+    </div>
+    <div class="input-group mb-3">
+      <textarea class="form-control" name="eventInfo" placeholder="Introduce your event here" required></textarea>
+    </div>
+
+    <a class="login-btn btn btn-light btn-lg" href="/events" role="button">Back</a>
+    <button type="submit" class="btn btn-dark btn-lg">Submit</button>
+  </form>
+
+</div>
+
+
+<%- include('partials/footer') %>

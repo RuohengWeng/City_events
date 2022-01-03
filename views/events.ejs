@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+<div class="eventsTop-container">
+  <img class="home-img" src="imgs/home.png" alt="guitar and flowers" width="200"/>
+  <p class="lead">Discover interesting events in your city!</p>
+</div>
+
+<div class="eventsMid-container">
+  <form action="/events" method="post">
+    <div class="input-group mb-3">
+    <input class="form-control search-text" type="text" name="cityName" placeholder="City Name" required/>
+    <button class="btn btn-warning" type="submit"> Let's Go </button>
+    </div>
+  </form>
+
+<!-- only display when users input invalid city name -->
+<% if (!searchStatus){ %>
+  <div class="alert alert-danger" role="alert">
+   City not found, please input a valid city!
+  </div>
+<% } %>
+
+<br />
+<a class="login-btn btn btn-light btn-lg" href="/" role="button">Log Out</a>
+<a class="btn btn-dark btn-lg" href="/submit" role="button">Submit a event</a>
+</div>
+
+<%- include('partials/footer') %>
