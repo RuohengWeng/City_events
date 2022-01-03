@@ -26,7 +26,7 @@ app.use(session({
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-//connect to city_events database using root user, password is null.
+//connect to city_events datavase in AWS RDS
 var connection = mysql.createConnection({
 	host     : 'database-2.cpeikqvkgdx2.us-east-2.rds.amazonaws.com',
 	port 		 : '3306',
