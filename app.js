@@ -28,10 +28,11 @@ app.use(bodyParser.json());
 
 //connect to city_events database using root user, password is null.
 var connection = mysql.createConnection({
-	host     : 'localhost',
-	user     : 'root',
-	password : '',
-	database : 'city_events'
+	host     : 'database-2.cpeikqvkgdx2.us-east-2.rds.amazonaws.com',
+	port 		 : '3306',
+	user     : 'Ruoheng',
+	password : '05071997',
+	database : 'City_events'
 });
 
 connection.connect(function(err) {
