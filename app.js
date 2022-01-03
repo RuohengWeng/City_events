@@ -31,7 +31,7 @@ var connection = mysql.createConnection({
 	host     : 'database-2.cpeikqvkgdx2.us-east-2.rds.amazonaws.com',
 	port 		 : '3306',
 	user     : 'Ruoheng',
-	password : '05071997',
+	password : '',
 	database : 'City_events'
 });
 
